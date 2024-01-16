@@ -1,0 +1,49 @@
+@import '../../app.scss';
+
+.navbar {
+  height: 100px;
+
+  @include desktop{
+    width: 80%;
+    margin: 0 20px 0 90px;
+  }
+  @include tablet{
+    width: 80%;
+    margin: 0 20px 0 110px;
+  }
+  @include mobile{
+    width: 80%;
+    margin: auto;
+  }
+  
+  .wrapper {
+    max-width: 1335px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile{
+      justify-content: flex-end;
+    }
+    span{
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include mobile{
+        display: none;
+      }
+    }
+
+    .social{
+      display: flex;
+      gap: 20px;
+
+      img{
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import '../../app.scss';
+
+.contact {
+  height: 100%;
+  max-width: 1335px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: auto;
+
+  @include desktop{
+    justify-content: space-evenly;
+    padding: 0 10px;
+  }
+  @include tablet{
+    flex-direction: column;
+    gap: 20px;
+  }
+  @include mobile{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    
+    @include tablet{
+      text-align: center;
+      width: 100%;
+      padding-top: 20px;
+    }
+    @include mobile{
+      text-align: center;
+      width: 100%;
+      padding-top: 54px;
+    }
+
+    h1{
+      font-size: 100px;
+      line-height: 88px;
+
+      @include desktop{
+        font-size: 88px;
+      }
+
+      @include tablet{
+        font-size: 55px;
+      }
+      @include mobile{
+        font-size: 35px;
+      }
+    }
+    span{
+      font-weight: 300;
+    }
+
+  }
+  .formContainer {
+    flex: 1;
+    position: relative;
+    
+    @include desktop{
+      width: 90%;
+    }
+    @include tablet{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+    }
+    @include mobile{
+      width: 80%;
+    }
+
+    .svgContainer{
+      width: 450px;
+      height: 450px;
+      position: absolute;
+      margin: auto;
+      stroke: #3ef6e6;
+      z-index: -1;
+      
+      @include tablet{
+        display: flex;
+        align-items: center;
+        width: 60%;
+        height: 80%;
+      }
+      @include mobile{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+      }
+    }
+    
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include tablet{
+        width: 100%;
+      }
+      @include mobile{
+        gap: 10px;
+      }
+
+        label{
+          position: absolute;
+          left: -9999px;
+        }
+        
+        input,textarea{
+          border: 1px solid white;
+          background-color: transparent;
+          padding: 20px;
+          color: white;
+          border-radius: 5px;
+          outline: none;
+        }
+        button{
+          padding: 20px;
+          background-color: #3ef6e6;
+          font-weight: 500;
+          cursor: pointer;
+          outline: none;
+        }
+    }
+  }
+}
