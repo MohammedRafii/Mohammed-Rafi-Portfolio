@@ -55,8 +55,9 @@
       }
       @include mobile{
         flex-direction: column;
-        height: 80%;
+        height: 100%;
         width: 100%;
+        gap: 15px;
       }
       a > img{
         flex: 1;

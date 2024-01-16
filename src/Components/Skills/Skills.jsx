@@ -20,7 +20,7 @@ const variants = {
 const Skills = () => {
 
   const ref = useRef()
-  const isInview = useInView(ref,{margin:"-100px"})
+  const isInview = useInView(ref,{margin:"-50px"})
 
   return (
     <motion.div

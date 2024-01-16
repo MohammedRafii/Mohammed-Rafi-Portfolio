@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 
 const variants = {
   initial: {
-    x: -500,
+    x: -100,
     opacity: 0,
   },
   animate: {
@@ -20,7 +20,7 @@ const variants = {
 const About = () => {
 
   const ref = useRef()
-  const isInview = useInView(ref,{margin:"-100px"})
+  const isInview = useInView(ref,{margin:"-50px"})
 
   return (
     <motion.div
