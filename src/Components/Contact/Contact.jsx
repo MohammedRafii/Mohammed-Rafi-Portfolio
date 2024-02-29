@@ -11,13 +11,21 @@ const Contact = () => {
 
     const sendEmail = (e) => {
       e.preventDefault();
-  
+  let Timeout;
       emailjs.sendForm('service_10q7uhm', 'template_qunjbyb', formRef.current, 'Z5UGP84jvjlZKm1M_')
         .then((result) => {
-            setSuccess(true)
-          }, (error) => {
-          setError(true)
-        });
+            Timeout=setTimeout(() => {
+  setSuccess(true)
+}, 1000);
+          }).catch( (error) => {
+            Timeout=setTimeout(() => {
+  setError(true)
+}, 1000);
+          
+        }).finally(){
+          clearTimeout(Timeout)
+          
+        }
     };
   return (
     <div
